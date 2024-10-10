@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+    odoo:
+        build: .
+        depends_on:
+          - db
+        container_name: odoo
+        command: sleep infinity
+        ports:
+            - 8069:8069
+        networks:
+          - odoo_network
+    db:
+      image: postgres:14
+      container_name: postgresql
+      environment:
+        - POSTGRES_DB=postgres
+        - POSTGRES_PASSWORD=odoo
+        - POSTGRES_USER=odoo
+      ports:
+        - 5432:5432
+      networks:
+        - odoo_network
+
+networks:
+  odoo_network:
+    driver: bridge

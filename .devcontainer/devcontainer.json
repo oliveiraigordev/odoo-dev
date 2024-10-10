@@ -1,0 +1,23 @@
+{
+  "name": "Odoo Development",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "odoo",
+  "workspaceFolder": "/mnt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.debugpy",
+        "redhat.vscode-yaml",
+        "redhat.vscode-xml",
+        "mechatroner.rainbow-csv",
+        "ms-python.python",
+        "esbenp.prettier-vscode",
+        "scapigliato.vsc-odoo-development",
+        "jigar-patel.odoosnippets",
+        "dotjoshjohnson.xml",
+        "christian-kohler.path-intellisense"
+      ]
+    }
+  },
+  "postCreateCommand": "sh .vscode/postCreateCommand.sh"
+}
