@@ -10,10 +10,12 @@ services:
             - 8069:8069
         networks:
           - odoo_network
-        environment:
-          - ODOO_UPDATE_MODULES="insurance_mediators"
         volumes:
-          - odoo-web-data:/var/lib/odoo/odoo-data
+          - ./repos/seguros/addons/extra-addons/seguros:/mnt/extra-addons/seguros
+          - ./repos/global/addons/custom-addons:/mnt/extra-addons/custom-addons
+          - ./repos/global/addons/enterprise-16.0:/mnt/extra-addons/enterprise
+          - ./repos/global/addons/third_addons:/mnt/extra-addons/third_addons
+
     db:
       image: postgres:15.4
       container_name: postgresql
@@ -21,17 +23,10 @@ services:
         - POSTGRES_DB=postgres
         - POSTGRES_PASSWORD=odoo
         - POSTGRES_USER=odoo
-        - PGDATA=/var/lib/postgresql/data/dbfiles
-      volumes:
-        - odoo-db-data:/var/lib/postgresql/data/dbfiles
       ports:
         - 5432:5432
       networks:
         - odoo_network
-volumes:
-  odoo-web-data:
-  odoo-db-data:
-
 networks:
   odoo_network:
     driver: bridge
