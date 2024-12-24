@@ -13,7 +13,7 @@ COPY --chown=odoo:odoo ./repos/seguros/addons/extra-addons/seguros /extra-addons
 COPY --chown=odoo:odoo ./repos/global/addons/custom-addons /mnt/extra-addons/custom-addons
 COPY --chown=odoo:odoo ./repos/global/addons/enterprise-16.0 /mnt/extra-addons/enterprise
 COPY --chown=odoo:odoo ./repos/global/addons/third_addons /mnt/extra-addons/third_addons
-COPY --chown=odoo:odoo ./requirements.txt /mnt/extra-addons/requirements.txt
+COPY --chown=odoo:odoo ./repos/requirements.txt /mnt/extra-addons/requirements.txt
 
 COPY --chown=odoo:odoo ./.vscode /mnt/.vscode
 COPY --chown=odoo:odoo ./odoo/odoo.conf /etc/odoo/odoo.conf
