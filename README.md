@@ -10,6 +10,10 @@ Instale as extensões minímas necessárias a seguir no seu vscode. abra os link
   - [ms-azuretools.vscode-docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) 
 
 
+## CLONAR OS REPOSITÓRIOS
+1. Acesse o diretório ./repos
+2. Clone os repositórios necessários dentro do diretório
+
 
 ## ABRIR O PROJETO NO VSCODE DENTRO CONTAINER DOCKER PARA INICIAR O DESENVOLVIMENTO.
 1. Clique no icone com <b>[><]</b> na barra de status, no canto inferior (em baixo) esquerdo do vscode.
