@@ -12,9 +12,9 @@ services:
           - odoo_network
         volumes:
           - ./repos/seguros/addons/extra-addons/seguros:/mnt/extra-addons/seguros
-          - ./repos/global/addons/custom-addons:/mnt/extra-addons/custom-addons
-          - ./repos/global/addons/enterprise-16.0:/mnt/extra-addons/enterprise
-          - ./repos/global/addons/third_addons:/mnt/extra-addons/third_addons
+          - ./repos/odoo_global/addons/custom-addons:/mnt/extra-addons/custom-addons
+          - ./repos/odoo_global/addons/enterprise-16.0:/mnt/extra-addons/enterprise
+          - ./repos/odoo_global/addons/third_addons:/mnt/extra-addons/third_addons
 
     db:
       image: postgres:15.4
